@@ -262,7 +262,7 @@ export default function Home() {
         </div>
         <footer className="m-auto p-4">
           
-            Powered by LangChainAI. Built by LxSilver.
+            Powered by LangChainAI. Originally built by Mayooear, rebuilt by LxSilver.
           
         </footer>
       </Layout>

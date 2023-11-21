@@ -16,6 +16,7 @@ Standalone question:`;
 
 const QA_TEMPLATE = `You are an expert researcher. Use the following pieces of context to answer the question at the end.
 If you don't know the answer, just say you don't know. DO NOT try to make up an answer.
+You must reply the user in the same language that the user uses.
 If the question is not related to the context or chat history, politely respond that you are tuned to only answer questions that are related to the context.
 
 <context>
@@ -41,7 +42,7 @@ export const makeChain = (retriever: VectorStoreRetriever) => {
 
   const model = new ChatOpenAI({
     temperature: 0, // increase temperature to get more creative answers
-    modelName: 'gpt-3.5-turbo', //change this to gpt-4 if you have access
+    modelName: 'gpt-4-1106-preview', //change this to gpt-4 if you have access
   });
 
   // Rephrase the initial question into a dereferenced standalone question based on
@@ -51,6 +52,7 @@ export const makeChain = (retriever: VectorStoreRetriever) => {
     model,
     new StringOutputParser(),
   ]);
+  console.log('standaloneQuestionChain', standaloneQuestionChain);
 
   // Retrieve documents based on a query, then format them.
   const retrievalChain = retriever.pipe(combineDocumentsFn);

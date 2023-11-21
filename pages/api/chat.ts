@@ -45,6 +45,7 @@ export default async function handler(
     const documentPromise = new Promise<Document[]>((resolve) => {
       resolveWithDocuments = resolve;
     });
+    //retriever1 = vectorStore.asRetriever(search_type="cosine", search_kwargs={'k': 3, 'threshold': 0.8})
     const retriever = vectorStore.asRetriever({
       callbacks: [
         {
@@ -74,6 +75,9 @@ export default async function handler(
     const sourceDocuments = await documentPromise;
 
     console.log('response', response);
+    //输出检索到的内容佛
+    // console.log('sourceDocuments', sourceDocuments);
+
     res.status(200).json({ text: response, sourceDocuments });
   } catch (error: any) {
     console.log('error', error);

@@ -1,0 +1,51 @@
+.
+├── README.md
+├── components
+│   ├── layout.tsx
+│   └── ui
+│       ├── LoadingDots.tsx
+│       ├── TextArea.tsx
+│       └── accordion.tsx
+├── config
+│   └── pinecone.ts
+├── declarations
+│   └── pdf-parse.d.ts
+├── directory_structure.txt
+├── docs
+│   └── DCS.pdf
+├── next-env.d.ts
+├── next.config.js
+├── package copy.json
+├── package.json
+├── pages
+│   ├── _app.tsx
+│   ├── _document.tsx
+│   ├── api
+│   │   └── chat.ts
+│   └── index.tsx
+├── postcss.config.cjs
+├── public
+│   ├── bot-image.png
+│   ├── favicon.ico
+│   └── usericon.png
+├── scripts
+│   └── ingest-data.ts
+├── styles
+│   ├── Home.module.css
+│   ├── base.css
+│   ├── chrome-bug.css
+│   └── loading-dots.module.css
+├── tailwind.config.cjs
+├── tsconfig.json
+├── types
+│   └── chat.ts
+├── utils
+│   ├── cn.ts
+│   ├── customPDFLoader.ts
+│   ├── makechain.ts
+│   └── pinecone-client.ts
+├── visual-guide
+│   └── gpt-langchain-pdf.png
+└── yarn.lock
+
+13 directories, 35 files
